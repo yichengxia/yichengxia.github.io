@@ -9,18 +9,18 @@
 			<span id="currSpan"></span>
 		</div>
 		<script type="text/javascript">
-            var startDate = new Date("2021-06-10 17:20:00 +0800");
+            var startDate = new Date("2021-06-10 17:30:00 +0800");
 			var currTimeSpan = document.getElementById("currSpan");
 			function showCurrSpan() {
-                var currDate = new Date();
-                var dateDiff = currDate.getTime() - startDate.getTime();
-                var day = Math.floor(dateDiff / (24 * 3600 * 1000));
-                var hourLeft = dateDiff % (24 * 3600 * 1000)
-                var hour = Math.floor(hourLeft / (3600 * 1000))
-                var minuteLeft = hourLeft % (3600 * 1000)
-                var minute = Math.floor(minuteLeft / (60 * 1000))
-                var secondLeft = minuteLeft % (60 * 1000)
-                var second = Math.round(secondLeft / 1000)
+				var currDate = new Date();
+				var dateDiff = currDate.getTime() - startDate.getTime();
+				var day = Math.floor(dateDiff / (24 * 3600 * 1000));
+				var hourLeft = dateDiff % (24 * 3600 * 1000);
+				var hour = Math.floor(hourLeft / (3600 * 1000));
+				var minuteLeft = hourLeft % (3600 * 1000);
+				var minute = Math.floor(minuteLeft / (60 * 1000));
+				var secondLeft = minuteLeft % (60 * 1000);
+				var second = Math.round(secondLeft / 1000);
 				currTimeSpan.innerText = "It has been " + day + " days " + hour + " hours " + minute + " minutes " + second + " seconds with you! :)";
 				setTimeout(showCurrSpan, 1000);
 			}
