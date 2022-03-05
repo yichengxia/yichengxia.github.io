@@ -21,6 +21,18 @@
 				var minute = Math.floor(minuteLeft / (60 * 1000));
 				var secondLeft = minuteLeft % (60 * 1000);
 				var second = Math.round(secondLeft / 1000);
+				if (second == 60) {
+					second = 0;
+					minute++;
+				}
+				if (minute == 60) {
+					minute = 0;
+					hour++;
+				}
+				if (hour == 24) {
+					hour = 0;
+					day++;
+				}
 				currTimeSpan.innerText = "It has been " + day + " days " + hour + " hours " + minute + " minutes " + second + " seconds with you! :)";
 				setTimeout(showCurrSpan, 1000);
 			}
