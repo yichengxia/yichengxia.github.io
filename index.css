@@ -1,0 +1,133 @@
+/*
+	@name love
+*/
+/* Only edit this if you know what you are doing! */
+body { margin: 0px; padding: 0px; font-family:"Arial"; overflow-x:hidden; }
+
+/* Only edit this if you know what you are doing! */
+img { position: absolute; display: block; margin: 0px; border: none; padding: 0px; }
+
+/* Only edit this if you know what you are doing! */
+div { position: absolute; }
+
+#content-container { display: block; position: relative; width: 1920px; width: 1920px;  overflow: hidden; display: block;  margin-left: auto; margin-right: auto;  }
+
+#content-container > div{ position: relative; top:inherit; }
+#page_love_ek1 {
+	top: 0px;
+	left: 0px;
+	width: 1920px;
+	height: 1440px;
+}
+
+#_bg__love_ek2 {
+	top: 0px;
+	left: 0px;
+	width: 1920px;
+	height: 1440px;
+	background:rgba(255,255,255,1);
+}
+
+
+#nice_day_4_3 {
+	top: 0px;
+	left: 0px;
+	width: 1920px;
+	height: 1440.16px;
+}
+
+#frame_2 {
+	top: 80px;
+	left: 162px;
+	width: 300px;
+	height: 840px;
+}
+
+#sylvia_circle {
+	top: 0px;
+	left: 0px;
+	width: 300px;
+	height: 300px;
+}
+
+
+#yicheng_circle {
+	top: 330px;
+	left: 0px;
+	width: 300px;
+	height: 300px;
+}
+
+
+#time_with_you {
+	top: 660px;
+	left: -4px;
+	width: 317px;
+	height: 197px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 24px;
+	text-align: center;
+	color:#FF0000;
+}
+
+/* Index below */
+
+#page_index_ek1 {
+	top: 0px;
+	left: 0px;
+	width: 1920px;
+	height: 1440px;
+}
+
+#_bg__index_ek2 {
+	top: 0px;
+	left: 0px;
+	width: 1920px;
+	height: 1440px;
+	background:rgba(255,255,255,1);
+}
+
+#frame_1 {
+	top: 99px;
+	left: 137px;
+	width: 349px;
+	height: 680px;
+}
+
+#_love_ek3 {
+	top: 0px;
+	left: -5px;
+	width: 370px;
+	height: 62px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 32px;
+	text-align: center;
+	color:#FF0000;
+}
+
+
+#dove_1 {
+	top: 80px;
+	left: -5px;
+	width: 370px;
+	height: 62px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 32px;
+	text-align: center;
+	color:#000000;
+}
+
+
+#nice_day_4_3_ek1 {
+	top: 0px;
+	left: 0px;
+	width: 1920px;
+	height: 1440.16px;
+}
+
+
+
+/* Add your custom CSS here */
