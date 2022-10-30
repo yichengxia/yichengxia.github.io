@@ -44,44 +44,44 @@
                                     <span id="dayText"></span> days 
                                     <span id="hourText"></span> hours 
                                     <span id="minuteText"></span> minutes 
-                                    <span id="secondText"></span> seconds with you! (Yicheng)</p>
-                                    <script type="text/javascript">
-                                        var startDate = new Date("2021/06/10 17:30:00 +0800");
-                                        var dayText = document.getElementById("dayText");
-                                        var hourText = document.getElementById("hourText");
-                                        var minuteText = document.getElementById("minuteText");
-                                        var secondText = document.getElementById("secondText");
-                                        function showCurrSpan() {
-                                            var currDate = new Date();
-                                            var dateDiff = currDate.getTime() - startDate.getTime();
-                                            var day = Math.floor(dateDiff / (24 * 3600 * 1000));
-                                            var hourLeft = dateDiff % (24 * 3600 * 1000);
-                                            var hour = Math.floor(hourLeft / (3600 * 1000));
-                                            var minuteLeft = hourLeft % (3600 * 1000);
-                                            var minute = Math.floor(minuteLeft / (60 * 1000));
-                                            var secondLeft = minuteLeft % (60 * 1000);
-                                            var second = Math.round(secondLeft / 1000);
-                                            if (second == 60) {
-                                                second = 0;
-                                                minute++;
-                                            }
-                                            if (minute == 60) {
-                                                minute = 0;
-                                                hour++;
-                                            }
-                                            if (hour == 24) {
-                                                hour = 0;
-                                                day++;
-                                            }
-                                            dayText.innerText = day;
-                                            hourText.innerText = hour;
-                                            minuteText.innerText = minute;
-                                            secondText.innerText = second;
-                                            setTimeout(showCurrSpan, 1000);
-                                        }
-                                        showCurrSpan();
-                                    </script>
-                                </div>
+                                    <span id="secondText"></span> seconds with you! (Yicheng)
+								</p>
+								<script type="text/javascript">
+									var startDate = new Date("2021/06/10 17:30:00 +0800");
+									var dayText = document.getElementById("dayText");
+									var hourText = document.getElementById("hourText");
+									var minuteText = document.getElementById("minuteText");
+									var secondText = document.getElementById("secondText");
+									function showCurrSpan() {
+										var currDate = new Date();
+										var dateDiff = currDate.getTime() - startDate.getTime();
+										var day = Math.floor(dateDiff / (24 * 3600 * 1000));
+										var hourLeft = dateDiff % (24 * 3600 * 1000);
+										var hour = Math.floor(hourLeft / (3600 * 1000));
+										var minuteLeft = hourLeft % (3600 * 1000);
+										var minute = Math.floor(minuteLeft / (60 * 1000));
+										var secondLeft = minuteLeft % (60 * 1000);
+										var second = Math.round(secondLeft / 1000);
+										if (second == 60) {
+											second = 0;
+											minute++;
+										}
+										if (minute == 60) {
+											minute = 0;
+											hour++;
+										}
+										if (hour == 24) {
+											hour = 0;
+											day++;
+										}
+										dayText.innerText = day;
+										hourText.innerText = hour;
+										minuteText.innerText = minute;
+										secondText.innerText = second;
+										setTimeout(showCurrSpan, 1000);
+									}
+									showCurrSpan();
+								</script>
 							</header>
 						</section>
 
