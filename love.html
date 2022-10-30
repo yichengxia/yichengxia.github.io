@@ -1,71 +1,124 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" >
+<!DOCTYPE HTML>
+<!--
+	Dopetrope by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
 	<head>
-		<meta http-equiv="content-type" content="text/html" charset="utf-8" />
-		<title>Yicheng's Love</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="" >
-		<link rel="StyleSheet" href="index.css" />
-		<script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js?v=6"></script>
-		<!-- Add your custom HEAD content here -->
-
+		<title>Love</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
-	<body>
-		<div id="content-container" >
-			<div id="page_love_ek1"  >
-				<div id="_bg__love_ek2"  ></div>
-				<img src="skins/nice_day_4_3.png" id="nice_day_4_3" />
+	<body class="love is-preload">
+		<div id="page-wrapper">
 
-				<div id="frame_2"  >
-					<a href="https://www.instagram.com/sylvia.liuliu/"><img src="skins/sylvia_circle.png" id="sylvia_circle" /></a>
-					<a href="https://www.instagram.com/yicheng.xia.pooh/"><img src="skins/yicheng_circle.png" id="yicheng_circle" /></a>
-					<div id="time_with_you" >
-						It has been<br/>
-						<span id="dayText"></span> days<br/>
-						<span id="hourText"></span> hours<br/>
-						<span id="minuteText"></span> minutes<br/>
-						<span id="secondText"></span> seconds<br/>with you!
+			<!-- Header -->
+				<section id="header">
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li class="current"><a href="index.html">Home</a></li>
+
+								<li><a href="./resume/Resume_Yicheng_Xia.pdf">Resume</a></li>
+								<!-- <li><a href="left-sidebar.html">Left Sidebar</a></li>
+								<li><a href="right-sidebar.html">Right Sidebar</a></li>
+								<li><a href="no-sidebar.html">No Sidebar</a></li> -->
+
+								<li>
+									<a href="#">Have Fun</a>
+									<ul>
+										<li><a href="love.html">Love</a></li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+
+					<!-- Banner -->
+						<section id="banner">
+							<header>
+								<h2>Hi, we're Yicheng and Sylvia.</h2>
+                                <p>It has been
+                                    <span id="dayText"></span> days 
+                                    <span id="hourText"></span> hours 
+                                    <span id="minuteText"></span> minutes 
+                                    <span id="secondText"></span> seconds with you! (Yicheng)</p>
+                                    <script type="text/javascript">
+                                        var startDate = new Date("2021/06/10 17:30:00 +0800");
+                                        var dayText = document.getElementById("dayText");
+                                        var hourText = document.getElementById("hourText");
+                                        var minuteText = document.getElementById("minuteText");
+                                        var secondText = document.getElementById("secondText");
+                                        function showCurrSpan() {
+                                            var currDate = new Date();
+                                            var dateDiff = currDate.getTime() - startDate.getTime();
+                                            var day = Math.floor(dateDiff / (24 * 3600 * 1000));
+                                            var hourLeft = dateDiff % (24 * 3600 * 1000);
+                                            var hour = Math.floor(hourLeft / (3600 * 1000));
+                                            var minuteLeft = hourLeft % (3600 * 1000);
+                                            var minute = Math.floor(minuteLeft / (60 * 1000));
+                                            var secondLeft = minuteLeft % (60 * 1000);
+                                            var second = Math.round(secondLeft / 1000);
+                                            if (second == 60) {
+                                                second = 0;
+                                                minute++;
+                                            }
+                                            if (minute == 60) {
+                                                minute = 0;
+                                                hour++;
+                                            }
+                                            if (hour == 24) {
+                                                hour = 0;
+                                                day++;
+                                            }
+                                            dayText.innerText = day;
+                                            hourText.innerText = hour;
+                                            minuteText.innerText = minute;
+                                            secondText.innerText = second;
+                                            setTimeout(showCurrSpan, 1000);
+                                        }
+                                        showCurrSpan();
+                                    </script>
+                                </div>
+							</header>
+						</section>
+
+				</section>
+
+			<!-- Footer -->
+				<section id="footer">
+					<div class="container">
+						<div class="row">
+							<div class="col-4 col-12-medium">
+								<section>
+									<header>
+										<h2>Contact me</h2>
+									</header>
+									<ul class="social">
+										<li><a class="icon brands fa-linkedin-in" href="https://www.linkedin.com/in/yichengxia/"><span class="label">LinkedIn</span></a></li>
+                                        <li><a class="icon brands fa-instagram" href="https://www.instagram.com/yicheng.xia.pooh/"><span class="label">Instagram</span></a></li>
+                                        <li><a class="icon brands fa-facebook-f" href="https://www.facebook.com/icheng.hsia"><span class="label">Facebook</span></a></li>
+									</ul>
+                                    <ul class="links">
+                                        <li>&copy; Yicheng Xia. All rights reserved.</li>
+                                    </ul>
+								</section>
+                            </div>
+						</div>
 					</div>
-				</div>
-			</div>
+				</section>
 
-			<script type="text/javascript">
-				var startDate = new Date("2021/06/10 17:30:00 +0800");
-				var dayText = document.getElementById("dayText");
-				var hourText = document.getElementById("hourText");
-				var minuteText = document.getElementById("minuteText");
-				var secondText = document.getElementById("secondText");
-				function showCurrSpan() {
-					var currDate = new Date();
-					var dateDiff = currDate.getTime() - startDate.getTime();
-					var day = Math.floor(dateDiff / (24 * 3600 * 1000));
-					var hourLeft = dateDiff % (24 * 3600 * 1000);
-					var hour = Math.floor(hourLeft / (3600 * 1000));
-					var minuteLeft = hourLeft % (3600 * 1000);
-					var minute = Math.floor(minuteLeft / (60 * 1000));
-					var secondLeft = minuteLeft % (60 * 1000);
-					var second = Math.round(secondLeft / 1000);
-					if (second == 60) {
-						second = 0;
-						minute++;
-					}
-					if (minute == 60) {
-						minute = 0;
-						hour++;
-					}
-					if (hour == 24) {
-						hour = 0;
-						day++;
-					}
-					dayText.innerText = day;
-					hourText.innerText = hour;
-					minuteText.innerText = minute;
-					secondText.innerText = second;
-					setTimeout(showCurrSpan, 1000);
-				}
-				showCurrSpan();
-			</script>
-			</div>
 		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
 	</body>
 </html>
