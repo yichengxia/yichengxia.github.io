@@ -85,19 +85,6 @@
 							<div class="col-8 col-12-medium imp-medium">
 
 								<!-- Content -->
-									<article id="content"></article>
-									<script>
-										fetch('https://yichengxia.github.io/Test.md')
-											.then(response => response.text())
-											.then(text => {
-												const content = marked(text);
-												document.getElementById('content').innerHTML = content;
-										
-												// Once the markdown is rendered to HTML and added to the DOM,
-												// tell MathJax to typeset the page:
-												MathJax.typeset();
-											});
-									</script>
 									<article class="box post">
 										<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
 										<header>
@@ -148,6 +135,7 @@
 												Maecenas sagittis convallis justo vel mattis.
 											</p>
 										</section>
+										<a href="articles/latex-test.html">Read More >></a>
 									</article>
 
 							</div>
@@ -296,10 +284,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-			<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-			<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
 
 	</body>
 </html>
