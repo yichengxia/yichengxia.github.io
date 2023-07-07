@@ -6,12 +6,12 @@
 -->
 <html>
 	<head>
-		<title>Riddles</title>
+		<title>JSON Escaper/Unescaper</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
-	<body class="riddles is-preload">
+	<body class="json is-preload">
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -40,26 +40,21 @@
 					<!-- Banner -->
 						<section id="banner">
 							<header>
-                                <h3>Riddles</h3>
-                                <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/core.min.js"></script>
-                                <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/md5.js"></script>
-                                <script>
-                                    function check(ans) {
-                                        var toCheck = document.getElementById("ans02122023").value;
-                                        if (toCheck == "") {
-                                            return;
-                                        }
-                                        var hash = CryptoJS.MD5(toCheck);
-                                        if (hash == ans) {
-                                            window.alert("Congratulations! Come and get a red packet from Yicheng :)");
-                                        } else {
-                                            window.alert("Oops! Take more time to find the answer :(");
-                                        }
-                                    }
-                                </script>
-                                What is Sylvia's gift from Yicheng for 2023 Valentine's Day? (Chinese)<br>
-                                <input type="text" id="ans02122023">
-                                <button onclick="check('af09236e58f3d8f4f5e30ca64ac3f250')", style="height: 80%;">Check</button>
+								<div class="input-btn-group">
+									<textarea id="jsonInput" rows="4" cols="80" placeholder="Input string"></textarea>
+									<br><br>
+									<h4>Input <button onclick="pasteJSON()">Paste</button> <button onclick="clearInput()">Clear</button></h4>
+								</div>
+								<br>
+								<h3>JSON String <button onclick="escapeJSON()">Escape</button> / <button onclick="unescapeJSON()">Unescape</button></h3>							
+								<div class="output-btn-group">
+									<br>
+									<h4>Output <button onclick="copyJSON()">Copy</button> <button onclick="clearOutput()">Clear</button></h4>
+									<br>
+									<textarea id="jsonOutput" rows="4" cols="80"  placeholder="Output string"></textarea>
+								</div>
+
+								<script src="assets/js/json-escaper.js"></script>
 							</header>
 						</section>
 
