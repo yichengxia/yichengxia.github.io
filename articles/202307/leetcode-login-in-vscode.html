@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>leetcode-login-in-vscode</title>
+  <title>LeetCode Login in VS Code</title>
   <link rel="stylesheet" href="https://stackedit.io/style.css" />
 </head>
 
@@ -13,7 +13,7 @@
     <div class="stackedit__toc">
       
 <ul>
-<li><a href="#leetcode-login-in-vscode">LeetCode Login in VSCode</a>
+<li><a href="#leetcode-login-in-vs-code">LeetCode Login in VS Code</a>
 <ul>
 <li><a href="#login-problem">Login Problem</a></li>
 <li><a href="#solution">Solution</a></li>
@@ -25,21 +25,31 @@
   </div>
   <div class="stackedit__right">
     <div class="stackedit__html">
-      <h1 id="leetcode-login-in-vscode">LeetCode Login in VSCode</h1>
+      <h1 id="leetcode-login-in-vs-code">LeetCode Login in VS Code</h1>
 <p><em>2023/07/08</em></p>
-<p>LeetCode is good, but its online IDE isn’t. It slows me down often when I am focusing on algorithm implementations. Instead, the need to memorize countless syntax details to ensure runnable code often distracts me from the core challenge. Outside LeetCode, I usually program on Visual Studio Code, which is powerful with the support of IntelliSense and Copilot. So, if you ever had the same feelings like me, you should definitely try <a href="https://marketplace.visualstudio.com/items?itemName=LeetCode.vscode-leetcode">this LeetCode extension</a> in VSCode provided by LeetCode China.</p>
+<p>LeetCode is good, but its online IDE isn’t. It slows me down often when I am focusing on algorithm implementations. Instead, the need to memorize countless syntax details to ensure runnable code often distracts me from the core challenge. Outside LeetCode, I usually program on Visual Studio Code, which is powerful with the support of IntelliSense and Copilot. So, if you ever had the same feelings like me, you should definitely try <a href="https://marketplace.visualstudio.com/items?itemName=LeetCode.vscode-leetcode">this LeetCode extension</a> in VS Code provided by LeetCode China.</p>
 <h2 id="login-problem">Login Problem</h2>
 <p>However, this article here is to record a solution that addresses the login problem of global accounts (<a href="http://leetcode.com">leetcode.com</a>) when using this extension. Feel free to skip ahead if your account is already on <a href="http://leetcode.cn">leetcode.cn</a> (previously <a href="http://leetcode-cn.com">leetcode-cn.com</a>).</p>
-<center><img src="https://raw.githubusercontent.com/LeetCode-OpenSource/vscode-leetcode/master/docs/imgs/endpoint.png"></center>
+<center><img src="https://raw.githubusercontent.com/yichengxia/yichengxia.github.io/main/articles/202307/account-interface.png" width="80%"></center>
 <p>Recently, attempting to log into LeetCode via the extension, whether through a direct account and password or a third-party account, triggers a pop-up and terminal notification that indicate failure. Then I generalize a temporary solution from <a href="https://github.com/LeetCode-OpenSource/vscode-leetcode/issues/478">this post</a>.</p>
 <h2 id="solution">Solution</h2>
 <h3 id="step-1-open-leetcode.com">Step 1: Open <a href="http://leetcode.com">leetcode.com</a></h3>
-<h3 id="step-2-open-inspect-on-browser">Step 2: Open Inspect on Browser</h3>
-<p>For Mac, use <code>Command</code> + <code>Shift</code> + <code>C</code>.<br>
-For Windows, use <code>Control</code> + <code>Shift</code> + <code>C</code>.</p>
-<h3 id="step-1-open-leetcode.com-1">Step 1: Open <a href="http://leetcode.com">leetcode.com</a></h3>
-<h3 id="step-1-open-leetcode.com-2">Step 1: Open <a href="http://leetcode.com">leetcode.com</a></h3>
-<h3 id="step-1-open-leetcode.com-3">Step 1: Open <a href="http://leetcode.com">leetcode.com</a></h3>
+<h3 id="step-2-open-inspect-in-browser">Step 2: Open Inspect in Browser</h3>
+<p>For Mac, press <code>Command</code> + <code>Shift</code> + <code>C</code>.<br>
+For Windows, press <code>Control</code> + <code>Shift</code> + <code>C</code>.<br>
+Or you can right-click and choose <strong>Inspect</strong>.</p>
+<p>Click <strong>Network</strong> on the menu bar. It should be blank at first, but will show a list of network requests after you refresh the web page.</p>
+<center><img src="https://raw.githubusercontent.com/yichengxia/yichengxia.github.io/main/articles/202307/inspect.png"></center>
+<p>Choose any of from the list whose request URL is under the domain of <strong>leetcode.com</a></strong>, say <strong>home/</strong>.</p>
+<center><img src="https://raw.githubusercontent.com/yichengxia/yichengxia.github.io/main/articles/202307/request.png" width="85%"></center>
+<p>Scroll down to find <strong>Cookie</strong> under <strong>Request Headers</strong>. Select and copy it.</p>
+<center><img src="https://raw.githubusercontent.com/yichengxia/yichengxia.github.io/main/articles/202307/cookie.png" width="85%"></center>
+<h3 id="step-3-open-vs-code">Step 3: Open VS Code</h3>
+<p>On this login interface, choose <strong>LeetCode Cookie</strong>.</p>
+<center><img src="https://raw.githubusercontent.com/yichengxia/yichengxia.github.io/main/articles/202307/login-interface.png" width="80%"></center>
+<p>Paste the cookie you got from step 2 here. Then you’ll see a success notification at the bottom-right corner of VS Code.</p>
+<center><img src="https://raw.githubusercontent.com/yichengxia/yichengxia.github.io/main/articles/202307/success-notification.png" width="65%"></center>
+<p>Congratulations!</p>
 
     </div>
   </div>
