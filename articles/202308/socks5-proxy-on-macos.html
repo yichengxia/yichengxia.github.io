@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOCKS5 Proxy on MacOS</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#socks5-proxy-on-macos">SOCKS5 Proxy on MacOS</a>
+<ul>
+<li><a href="#browser">Browser</a></li>
+<li><a href="#terminal">Terminal</a></li>
+<li><a href="#vs-code">VS Code</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h1 id="socks5-proxy-on-macos">SOCKS5 Proxy on MacOS</h1>
+<p><em>2023/08/05</em></p>
+<p>Ever experienced network restrictions or just needed to enhance network security? You may find configuring proxies on MacOS challenging. The intricacies lie in MacOS’s proxy mechanism, which can lead to instances where certain applications, like Google Chrome, might utilize a proxy while others, like Terminal, operate without one. To add to the versatility, SOCKS5 proxies stand out from traditional HTTP proxies, as they offer the capability to handle any type of network traffic, transcending the limitations of HTTP and HTTPS webpages.</p>
+<p>In this comprehensive guide, we delve into the art of seamlessly setting up a SOCKS5 proxy that transcends application boundaries, catering to your browsing needs, terminal activities, and even elevating your development experience on the VS Code platform.</p>
+<h2 id="browser">Browser</h2>
+<p>Configuring a SOCKS5 proxy for your web browser is a straightforward process, made even more accessible with the support of modern SOCKS5 proxy tools, such as <a href="https://github.com/shadowsocks/ShadowsocksX-NG">Shadowsocks</a>. While it serves as a crucial prerequisite for setting up proxies on Terminal and VS Code, this initial step deserves its place of prominence for seamless integration.</p>
+<h2 id="terminal">Terminal</h2>
+<p>Upon initializing your SOCKS5 proxy tool on MacOS, you may encounter a common challenge: the proxy might not seamlessly extend its reach to the Terminal. To ascertain its status, a simple test involves using the <code>curl</code> command to access websites and retrieve public IP data from their responses.</p>
+<p>For instance, executing:</p>
+<pre><code>curl ipinfo.io
+</code></pre>
+<p>will yield output akin to:</p>
+<pre><code>{
+  "ip": "█.█.█.█",
+  "city": "Zhangjiakou",
+  "region": "Hebei",
+  "country": "CN",
+  "loc": "█,█",
+  "org": "█",
+  "timezone": "Asia/Shanghai",
+  "readme": "https://ipinfo.io/missingauth"
+}
+</code></pre>
+<p>Analyzing this data will enable you to discern if the current Terminal is utilizing the proxy. If not, investigate the SOCKS5 tool’s local address and port settings. Assuming the tool is listening on <code>127.0.0.1:1086</code>, navigate to Terminal and input:</p>
+<pre><code>export all_proxy=socks5://127.0.0.1:1086
+</code></pre>
+<p>Re-running <code>curl ipinfo.io</code> should present output akin to:</p>
+<pre><code>{
+  "ip": "█.█.█.█",
+  "city": "Los Angeles",
+  "region": "California",
+  "country": "US",
+  "loc": "█,█",
+  "org": "█",
+  "timezone": "America/Los_Angeles",
+  "readme": "https://ipinfo.io/missingauth"
+}
+</code></pre>
+<p>Compare the retrieved IP address, location, organization, and timezone with the previous results to confirm if the SOCKS5 proxy is now active on <em>this</em> Terminal. Keep in mind that opening another Terminal will not default to proxy usage.</p>
+<p>Resetting the proxy can be accomplished with the command:</p>
+<pre><code>unset all_proxy
+</code></pre>
+<p>However, this is typically unnecessary, as simply closing and reopening the Terminal will suffice for subsequent operations.</p>
+<h2 id="vs-code">VS Code</h2>
+<p>In the dynamic world of VS Code, seamless interaction with remote servers ensures smooth updates of internal packages. From the side of Settings in VS Code, it only gives us an option of HTTP proxies. To harness the true potential of SOCKS5 proxies, a slightly unconventional yet easily attainable approach first requires integrating VS Code’s start command into the PATH environment.</p>
+<p>While traditional methods like <code>export PATH="your-dir:$PATH"</code> may suffice, the ingenious minds behind VS Code have blessed users with a one-click solution for effortless configuration.<br>
+Open VS Code and press <code>Command</code> + <code>Shift</code> + <code>P</code> to invoke the search bar. Then, type <code>shell</code> to uncover the following option, and choose the one below.</p>
+<center><img src="https://raw.githubusercontent.com/yichengxia/yichengxia.github.io/main/articles/202308/add-code-to-path.png" width="80%"></center>
+<p>A success notification shall greet you, and you are now ready to open a new Terminal and execute the command:</p>
+<pre><code>code --proxy-server="socks5://127.0.0.1:1086"
+</code></pre>
+<p>Then a new VS Code window will emerge, seamlessly channeling all its traffic through the SOCKS5 server address. Congratulations!</p>
+
+    </div>
+  </div>
+</body>
+
+</html>
