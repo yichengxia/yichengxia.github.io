@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bringing Back Project URL on LinkedIn</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#bringing-back-project-url-on-linkedin">Bringing Back Project URL on LinkedIn</a>
+<ul>
+<li><a href="#problem">Problem</a></li>
+<li><a href="#solution">Solution</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h1 id="bringing-back-project-url-on-linkedin">Bringing Back Project URL on LinkedIn</h1>
+<p><em>2023/12/16</em></p>
+<p>Are you wondering where to add a “Project URL” for your projects on LinkedIn? A recent update has caused confusion among many professionals: the ability to add URLs to projects on their profiles seems to have vanished. This functionality was particularly vital for individuals in tech and creative fields, enabling them to link directly to external works, such as GitHub repositories or personal project websites.</p>
+<h2 id="problem">Problem</h2>
+<p>This article aims to offer a workaround for the missing “Project URL” feature when creating new projects on LinkedIn. The issue first came to light in mid-2023, as evidenced by <a href="https://www.reddit.com/r/linkedin/comments/14ichn7/did_linkedin_remove_the_ability_to_add_urls_to/">this Reddit post</a>. I’ve devised a temporary solution based on this discussion.</p>
+<center><img src="https://raw.githubusercontent.com/yichengxia/yichengxia.github.io/main/articles/202312/interface.png" width="80%"></center>
+<h2 id="solution">Solution</h2>
+<h3 id="step-1-open-your-linkedin-page">Step 1: Open Your LinkedIn Page</h3>
+<p>Navigate to your LinkedIn page to begin the process.</p>
+<h3 id="step-2-fetch-request-template">Step 2: Fetch Request Template</h3>
+<p>For Mac, press <code>Command</code> + <code>Shift</code> + <code>C</code>.<br>
+For Windows, press <code>Control</code> + <code>Shift</code> + <code>C</code>.<br>
+Or you can right-click and choose <strong>Inspect</strong>.</p>
+<p>Once the <strong>Network</strong> tab is open, it will initially be blank. It will populate with a list of network requests after you make changes to the project for which you wish to add a URL.</p>
+<p>Look for a request starting with <code>graphql?action=</code>, right-click it, and select <strong>Copy</strong> -&gt; <strong>Copy as fetch</strong> to copy the POST request template.</p>
+<center><img src="https://raw.githubusercontent.com/yichengxia/yichengxia.github.io/main/articles/202312/copy-template.png" width="85%"></center>
+<p>Next, switch to the <strong>Console</strong> tab.</p>
+<h3 id="step-3-send-modified-request">Step 3: Send Modified Request</h3>
+<p>Paste the copied content into the <strong>Console</strong>. It should appear as a lengthy JSON string.</p>
+<center><img src="https://raw.githubusercontent.com/yichengxia/yichengxia.github.io/main/articles/202312/modify-request.png" width="85%"></center>
+<p>Focusing on the value of <code>body</code>, we modify the script as follows:</p>
+<ul>
+<li>Change <code>description</code> to <code>url</code>.</li>
+<li>Update the value of <code>textInputValue</code> to the desired URL.</li>
+</ul>
+<p>After pressing enter, your new URL will be added to your project. Congratulations on successfully navigating this workaround!</p>
+
+    </div>
+  </div>
+</body>
+
+</html>
