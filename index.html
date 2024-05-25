@@ -10,6 +10,57 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			.collapsible {
+				background-color: #99CCFF;
+				cursor: pointer;
+				padding: 10px;
+				width: 100%;
+				border: none;
+				text-align: left;
+				outline: none;
+				font-size: 18px;
+				margin-bottom: 10px;
+			}
+	
+			.active, .collapsible:hover {
+				background-color: #1E90FF;
+			}
+	
+			.content {
+				padding: 0 18px;
+				display: none;
+				overflow: hidden;
+				background-color: #f9f9f9;
+			}
+	
+			.box {
+				border: 1px solid #ddd;
+				margin-bottom: 10px;
+				padding: 2.75em 1.75em 2.75em 1.75em;
+				width: 30%;
+				float: left;
+				margin-right: 1.5%;
+				box-sizing: border-box;
+			}
+	
+			.box:last-child {
+				margin-right: 0;
+			}
+	
+			.clearfix::after {
+				content: "";
+				clear: both;
+				display: table;
+			}
+	
+			@media screen and (max-width: 768px) {
+				.box {
+					width: 100%;
+					margin-right: 0;
+				}
+			}
+		</style>
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
@@ -59,8 +110,8 @@
 						<section id="banner">
 							<header>
 								<h2>Hi, I'm Yicheng.</h2>
-								<p>• Current Master at the <em>University of Pennsylvania</em></p>
-								<p>• Dual degree in <em>Computer and Information Science</em> + <em>Scientific Computing</em></p>
+								<p>• Graduated from the <font color="#1E90FF">University of Pennsylvania</font></p>
+								<p>• Dual master's degree in <font color="#1E90FF">Computer and Information Science</font> and <font color="#1E90FF">Scientific Computing</font></p>
 								<!-- <p>• Expected to graduate in May 2024</p> -->
 							</header>
 						</section>
@@ -74,6 +125,15 @@
 							<div class="row">
 								<div class="col-4 col-12-medium">
 									<section class="first">
+										<a href="https://www.tiktok.com/about?lang=en"><img src="images/logos/tiktok_logo.jpeg" alt="TikTok"></a>
+										<header>
+											<h2>Software Engineer</h2>
+										</header>
+										<p>Jul 2024 - Present</p>
+									</section>
+								</div>
+								<div class="col-4 col-12-medium">
+									<section class="middle">
 										<a href="https://www.alibabagroup.com/en-US"><img src="images/logos/alibaba_group_logo.jpeg" alt="Alibaba Group"></a>
 										<!-- <i class="icon solid featured fa-cog"></i> -->
 										<header>
@@ -83,20 +143,13 @@
 									</section>
 								</div>
 								<div class="col-4 col-12-medium">
-									<section class="middle">
+									<section class="last">
 										<a href="https://www.witnesstomassincarceration.org/"><img src="images/logos/witness_to_mass_incarceration_inc_logo.jpeg" alt="Witness to Mass Incarceration Inc."></a>
 										<!-- <i class="icon solid featured alt fa-bolt"></i> -->
 										<header>
 											<h2>Software Engineer Intern</h2>
 										</header>
 										<p>May 2022 - Aug 2022</p>
-										<!-- <p>• Designed and built an e-commerce cloud system with interactive APIs and frontend interfaces on Figma</p>
-										<p>• Used Django and PostgreSQL for backend and imported 1K+ sellers’ information to be searchable</p>
-										<p>• Deployed it on Heroku and supported admins, sellers, and customers with separated functions and mobile views</p> -->
-									</section>
-								</div>
-								<div class="col-4 col-12-medium">
-									<section class="last">
 									</section>
 								</div>
 							</div>
@@ -112,21 +165,13 @@
 										<header>
 											<h2>Teaching Assistant</h2>
 										</header>
-										<p>May 2022 - Present</p>
+										<p>May 2022 - May 2024</p>
 										<p>• CIS 551: Computer and Network Security (Summer 2022, Fall 2022, Summer 2023, Fall 2023, & Spring 2024)</p>
 										<p>• CIT 582: Blockchains and Cryptography (Spring 2023)</p>
 									</section>
 								</div>
 								<div class="col-4 col-12-medium">
 									<section class="last">
-										<a href="https://www.usts.edu.cn/"><img src="images/logos/suzhou_university_of_science_and_technology_logo.jpeg" alt="Suzhou University of Science and Technology"></a>
-										<!-- <i class="icon solid featured alt2 fa-star"></i> -->
-										<header>
-											<h2>Research Assistant</h2>
-										</header>
-										<p>May 2020 - May 2021</p>
-										<p>• Built a raspberry Pi system and saved 49.15% fan energy in full speed with designed image processing algorithms</p>
-										<p>• Patent: An Intelligent Demand-Oriented Ventilation Control System Based on Occupant Detection</p>
 									</section>
 								</div>
 							</div>
@@ -147,92 +192,87 @@
 							<div class="col-12">
 
 								<!-- Portfolio -->
-									<section>
-										<header class="major">
-											<h2>Projects</h2>
-										</header>
-										<div class="row">
-											<div class="col-4 col-6-medium col-12-small">
-												<section class="box">
-													<a class="image featured"><img src="images/search-engine.png" alt="" /></a>
-													<header>
-														<h3>Search Engine <a class="icon brands fa-github" href="https://github.com/yichengxia/Penn-CIS555"></a></h3>
-													</header>
-													<p>Google-style search engine with web crawlers, a TF-IDF indexer, PageRank, and web UI deployed on AWS</p>
-												</section>
-											</div>
-											<div class="col-4 col-6-medium col-12-small">
-												<section class="box">
-													<a class="image featured"><img src="images/forx-news.png" alt="" /></a>
-													<header>
-														<h3>Forx News 
-															<a class="icon brands fa-github" href="https://github.com/yichengxia/Penn-CIS550"></a>
-															<a class="icon brands fa-youtube" href="https://www.youtube.com/watch?v=nuDBwg3mG6o"></a>
-														</h3>
-													</header>
-													<p>Restaurant review website based on Yelp datasets</p>
-												</section>
-											</div>
-											<div class="col-4 col-6-medium col-12-small">
-												<section class="box">
-													<a class="image featured"><img src="images/mini-minecraft.png" alt="" /></a>
-													<header>
-														<h3>Mini Minecraft 
-															<a class="icon brands fa-github" href="https://github.com/yichengxia/Penn-CIS560"></a>
-															<a class="icon brands fa-youtube" href="https://www.youtube.com/watch?v=-ugbfOrRAF4"></a>
-														</h3>
-													</header>
-													<p>Interactive 3D world exploration and alteration program created with Qt Creator</p>
-												</section>
-											</div>
-											<div class="col-4 col-6-medium col-12-small">
-												<section class="box">
-													<a class="image featured"><img src="images/penn-os.png" alt="" /></a>
-													<header>
-														<h3>PennOS
-															<!-- <a class="icon brands fa-github" href="https://github.com/yichengxia/Penn-CIS555#hw1-web-and-microservice-framework"></a> -->
-														</h3>
-													</header>
-													<p>User-level Unix-like operating system with a kernel (scheduler), a file system, and a shell</p>
-												</section>
-											</div>
-											<div class="col-4 col-6-medium col-12-small">
-												<section class="box">
-													<a class="image featured"><img src="images/image-style-transfer.png" alt="" /></a>
-													<header>
-														<h3>Image Style Transfer 
-															<a class="icon brands fa-github" href="https://github.com/yichengxia/Penn-CIS581"></a>
-															<a class="icon brands fa-youtube" href="https://www.youtube.com/watch?v=o0w-HiS9-YA"></a>
-														</h3>
-													</header>
-													<p>Neural Style Transfer (NST) for paired and CycleGAN for unpaired style transfer applications</p>
-												</section>
-											</div>
-											<div class="col-4 col-6-medium col-12-small">
-												<section class="box">
-													<a class="image featured"><img src="images/multidimensional-analysis.png" alt="" /></a>
-													<header>
-														<h3>Multidimensional Analysis of the Effects of Climate Change <a class="icon brands fa-github" href="https://github.com/yichengxia/Penn-CIS545"></a></h3>
-													</header>
-													<p>Analysis of relations between the global temperature and other data with machine learning models</p>
-												</section>
-											</div>
-											<!-- <div class="col-4 col-6-medium col-12-small">
-												<section class="box">
-													<a href="#" class="image featured"><img src="images/pic07.jpg" alt="" /></a>
-													<header>
-														<h3>Dolore nisl feugiat</h3>
-													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-													<footer>
-														<ul class="actions">
-															<li><a href="#" class="button alt">Find out more</a></li>
-														</ul>
-													</footer>
-												</section>
-											</div> -->
+								<section>
+									<header class="major">
+										<h2>Projects</h2>
+									</header>
+									<button class="collapsible">Systems</button>
+									<div class="content clearfix">
+										<div class="box">
+											<a class="image featured"><img src="images/penncloud.png" alt="" /></a>
+											<header>
+												<h3>PennCloud 
+													<a class="icon brands fa-github" href="https://github.com/yichengxia/Penn-CIS505"></a>
+													<a class="icon brands fa-youtube" href="https://www.youtube.com/watch?v=4uSrdlRKoJA"></a>
+												</h3>
+											</header>
+											<p>Distributed cloud platform supporting user accounts, web storage, mail service, and admin console</p>
 										</div>
-									</section>
+										<div class="box">
+											<a class="image featured"><img src="images/search-engine.png" alt="" /></a>
+											<header>
+												<h3>Search Engine <a class="icon brands fa-github" href="https://github.com/yichengxia/Penn-CIS555"></a></h3>
+											</header>
+											<p>Google-style search engine with web crawlers, a TF-IDF indexer, PageRank, and web UI deployed on AWS</p>
+										</div>
+										<div class="box">
+											<a class="image featured"><img src="images/penn-os.png" alt="" /></a>
+											<header>
+												<h3>PennOS</h3>
+											</header>
+											<p>User-level Unix-like operating system with a kernel (scheduler), a file system, and a shell</p>
+										</div>
+									</div>
+								
+									<button class="collapsible">Database</button>
+									<div class="content clearfix">
+										<div class="box">
+											<a class="image featured"><img src="images/forx-news.png" alt="" /></a>
+											<header>
+												<h3>Forx News 
+													<a class="icon brands fa-github" href="https://github.com/yichengxia/Penn-CIS550"></a>
+													<a class="icon brands fa-youtube" href="https://www.youtube.com/watch?v=nuDBwg3mG6o"></a>
+												</h3>
+											</header>
+											<p>Restaurant review website based on Yelp datasets</p>
+										</div>
+									</div>
+								
+									<button class="collapsible">Computer Graphics</button>
+									<div class="content clearfix">
+										<div class="box">
+											<a class="image featured"><img src="images/mini-minecraft.png" alt="" /></a>
+											<header>
+												<h3>Mini Minecraft 
+													<a class="icon brands fa-github" href="https://github.com/yichengxia/Penn-CIS560"></a>
+													<a class="icon brands fa-youtube" href="https://www.youtube.com/watch?v=-ugbfOrRAF4"></a>
+												</h3>
+											</header>
+											<p>Interactive 3D world exploration and alteration program created with Qt Creator</p>
+										</div>
+									</div>
+								
+									<button class="collapsible">Machine Learning</button>
+									<div class="content clearfix">
+										<div class="box">
+											<a class="image featured"><img src="images/image-style-transfer.png" alt="" /></a>
+											<header>
+												<h3>Image Style Transfer 
+													<a class="icon brands fa-github" href="https://github.com/yichengxia/Penn-CIS581"></a>
+													<a class="icon brands fa-youtube" href="https://www.youtube.com/watch?v=o0w-HiS9-YA"></a>
+												</h3>
+											</header>
+											<p>Neural Style Transfer (NST) for paired and CycleGAN for unpaired style transfer applications</p>
+										</div>
+										<div class="box">
+											<a class="image featured"><img src="images/multidimensional-analysis.png" alt="" /></a>
+											<header>
+												<h3>Multidimensional Analysis of the Effects of Climate Change <a class="icon brands fa-github" href="https://github.com/yichengxia/Penn-CIS545"></a></h3>
+											</header>
+											<p>Analysis of relations between the global temperature and other data with machine learning models</p>
+										</div>
+									</div>
+								</section>
 
 							</div>
 							<div class="col-12">
@@ -329,6 +369,21 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script>
+				var coll = document.getElementsByClassName("collapsible");
+				var i;
+			
+				for (i = 0; i < coll.length; i++) {
+					coll[i].addEventListener("click", function() {
+						this.classList.toggle("active");
+						var content = this.nextElementSibling;
+						if (content.style.display === "block") {
+							content.style.display = "none";
+						} else {
+							content.style.display = "block";
+						}
+					});
+				}
+			</script>
 	</body>
 </html>
