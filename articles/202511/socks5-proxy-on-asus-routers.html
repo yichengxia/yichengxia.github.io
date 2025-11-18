@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOCKS5 Proxy on ASUS Routers</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#socks5-proxy-on-asus-routers">SOCKS5 Proxy on ASUS Routers</a>
+<ul>
+<li><a href="#preparations">Preparations</a></li>
+<li><a href="#steps">Steps</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h1 id="socks5-proxy-on-asus-routers">SOCKS5 Proxy on ASUS Routers</h1>
+<p><em>2024/11/17</em></p>
+<p>Tired of installing and turning on/off proxy apps on every of your device? Here is a cleaner solution: set up a SOCKS5 proxy directly on your ASUS router to bypass firewall restrictions for your whole network.</p>
+<h2 id="preparations">Preparations</h2>
+<p>To follow this tutorial, you will need</p>
+<ul>
+<li>An ASUS router (e.g., RT-AC68U or RT-AC88U);</li>
+<li>A valid proxy server configuration;</li>
+<li>A device connected to your router that can access the router’s web portal.</li>
+</ul>
+<h2 id="steps">Steps</h2>
+<h3 id="step-1-install-the-merlin-firmware">Step 1: Install the Merlin Firmware</h3>
+<p>First, download the latest Merlin firmware for your router from <a href="https://fw.koolcenter.com/">CoolCenter</a>.</p>
+<p>Open your browser and connect to the router’s admin portal, usually available at <code>192.168.50.1</code> or <code>192.168.1.1</code>.</p>
+<p>Navigate to <em>Administration</em> → <em>Firmware Upgrade</em>.</p>
+<center><img src="https://raw.githubusercontent.com/yichengxia/yichengxia.github.io/main/articles/202511/asus-administration.png" width="50%"></center>
+<p>Manually upload the Merlin firmware file you downloaded.</p>
+<center><img src="https://raw.githubusercontent.com/yichengxia/yichengxia.github.io/main/articles/202511/asus-firmware-upgrade.png" width="80%"></center>
+<p>Once the router reboots, log in again and confirm that the firmware version now shows Merlin.</p>
+<center><img src="https://raw.githubusercontent.com/yichengxia/yichengxia.github.io/main/articles/202511/asus-upgraded.png" width="50%"></center>
+<h3 id="step-2-install-the-proxy-plugin">Step 2: Install the Proxy Plugin</h3>
+<p>Download the appropriate proxy plugin for your router from the <a href="https://github.com/hq450/fancyss">fancyss GitHub repository</a>. The <em>Lite</em> version is usually sufficient.</p>
+<p>Return to the router’s web portal. Go to <em>Administration</em> → <em>System Settings</em>, and ensure that <em>JFFS</em> is enabled.</p>
+<center><img src="https://raw.githubusercontent.com/yichengxia/yichengxia.github.io/main/articles/202511/asus-jffs.png" width="50%"></center>
+<p>Then go to <em>Software Center</em> → <em>Advanced Settings</em> and upload the proxy plugin file.</p>
+<center><img src="https://raw.githubusercontent.com/yichengxia/yichengxia.github.io/main/articles/202511/asus-software-install.png" width="80%"></center>
+<p>After installation, the new proxy tool will appear in the Software Center with an icon similar to Shadowsocks. Open it, enter your proxy credentials, and you are all set.</p>
+
+    </div>
+  </div>
+</body>
+
+</html>
