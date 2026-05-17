@@ -2200,6 +2200,87 @@ input, select, textarea {
 				font-size: 1em;
 			}
 
+	#banner-sylvia {
+		min-height: 460px;
+		background:
+			radial-gradient(circle at 68% 40%, rgba(72,118,255,0.38), transparent 30%),
+			linear-gradient(135deg, #081427 0%, #10264d 45%, #0b1d39 100%);
+		position: relative;
+		padding: 4em 10%;
+		margin: 4em 0 0 0;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 90px;
+
+		overflow: hidden;
+	}
+
+	#banner-sylvia::after {
+		content: "";
+		width: 260px;
+		height: 260px;
+		border-radius: 50%;
+		background: url("../../images/sylvia-circle.png") center/cover no-repeat;
+		/* border: 2px solid rgba(255,255,255,0.18); */
+		box-shadow: 0 25px 70px rgba(0,0,0,0.35);
+		flex-shrink: 0;
+	}
+
+	#banner-sylvia header {
+		background: transparent;
+		padding: 0;
+		width: 560px;
+	}
+
+	#banner-sylvia header h2 {
+		color: #ffffff;
+		font-weight: 800;
+		font-size: 3.1em;
+		line-height: 1.15;
+		margin: 0 0 0.6em 0;
+		letter-spacing: -1px;
+		white-space: nowrap;
+	}
+
+	#banner-sylvia header p {
+		font-style: normal;
+		color: rgba(255,255,255,0.78);
+		margin: 0.5em 0;
+		font-size: 1.1em;
+		line-height: 1;
+	}
+
+	@media (max-width: 768px) {
+    #banner-sylvia {
+        flex-direction: column;          /* stack vertically */
+        text-align: center;
+        gap: 30px;
+        padding: 3em 1.5em;
+    }
+
+    #banner-sylvia::after {
+        width: 180px;
+        height: 180px;
+    }
+
+    #banner-sylvia header {
+        width: 100%;                    /* remove fixed width */
+    }
+
+    #banner-sylvia header h2 {
+        font-size: 2em;                 /* scale down */
+        white-space: normal;            /* allow wrapping */
+        letter-spacing: 0;
+    }
+
+    #banner-sylvia header p {
+        font-size: 1em;
+        line-height: 1.4;
+    }
+}
+
 /* Intro */
 
 	#intro {
