@@ -69,8 +69,10 @@
 				<section id="header">
 
 					<!-- Nav -->
-						<nav id="nav">
-						</nav>
+						<div class="lang-switch">
+							<a id="cnBtn" class="lang-btn" href="sylvia.html">CN</a>
+							<a id="enBtn" class="lang-btn" href="sylvia-en.html">EN</a>
+						</div>
 
 					<!-- Banner -->
 						<section id="banner-sylvia">
@@ -332,6 +334,30 @@
 							content.style.display = "block";
 						}
 					});
+				}
+			</script>
+			<script>
+				document.getElementById("titleBar").style.pointerEvents = "none";
+			</script>
+			<script>
+				const isEnglishPage = window.location.pathname.includes("sylvia-en");
+
+				const cnBtn = document.getElementById("cnBtn");
+				const enBtn = document.getElementById("enBtn");
+
+				if (isEnglishPage) {
+					enBtn.classList.add("active");
+
+					// Disable clicking current page
+					enBtn.removeAttribute("href");
+					enBtn.style.pointerEvents = "none";
+
+				} else {
+					cnBtn.classList.add("active");
+
+					// Disable clicking current page
+					cnBtn.removeAttribute("href");
+					cnBtn.style.pointerEvents = "none";
 				}
 			</script>
 	</body>
